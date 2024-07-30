@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Travel Destinations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .search-container input[type="text"] {
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            flex: 1;
+        }
+        .search-container button {
+            padding: 10px 20px;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .search-container button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+      
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><a href="index.html" style="color: rgb(255, 255, 255);">TravelMe</a></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="destination.html">Destinations</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="signin.html">Sign In</a>
+                <a href="signup.html" class="sign-up">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <section class="destination-section">
+        <div class="destination-content">
+            <h2>Top Travel Destinations</h2>
+            <div class="search-container">
+                <input type="text" placeholder="Search..." name="search" id="searchInput">
+                <button type="button" onclick="performSearch()">Search</button>
+            </div>
+            <div class="destination-grid" id="destinationGrid">
+                <div class="destination" data-name="Bali, Indonesia">
+                    <img src="images/destination1.jpg" alt="Destination 1">
+                    <h3>Bali, Indonesia</h3>
+                    <p>Experience the beauty of Bali’s beaches, temples, and vibrant culture.</p>
+                    <a href="destination1.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Paris, France">
+                    <img src="images/destination2.jpg" alt="Destination 2">
+                    <h3>Paris, France</h3>
+                    <p>Discover the romance and rich history of Paris, from the Eiffel Tower to world-class museums.</p>
+                    <a href="destination2.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Tokyo, Japan">
+                    <img src="images/destination3.jpg" alt="Destination 3">
+                    <h3>Tokyo, Japan</h3>
+                    <p>Explore the bustling metropolis of Tokyo with its unique blend of tradition and modernity.</p>
+                    <a href="destination3.html">Read More</a>
+                </div>
+                <div class="destination" data-name="New York City, USA">
+                    <img src="images/destination4.jpg" alt="Destination 4">
+                    <h3>New York City, USA</h3>
+                    <p>Experience the vibrant energy and iconic landmarks of New York City.</p>
+                    <a href="destination4.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Sydney, Australia">
+                    <img src="images/destination5.jpg" alt="Destination 5">
+                    <h3>Sydney, Australia</h3>
+                    <p>Enjoy Sydney’s stunning harbor, beautiful beaches, and famous opera house.</p>
+                    <a href="destination5.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Rome, Italy">
+                    <img src="images/destination6.jpg" alt="Destination 6">
+                    <h3>Rome, Italy</h3>
+                    <p>Explore the historic ruins and rich cultural heritage of Rome.</p>
+                    <a href="destination6.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Dubai, UAE">
+                    <img src="images/destination7.jpg" alt="Destination 7">
+                    <h3>Dubai, UAE</h3>
+                    <p>Experience the luxury and modern marvels of Dubai, from skyscrapers to desert adventures.</p>
+                    <a href="destination7.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Cape Town, South Africa">
+                    <img src="images/destination8.jpg" alt="Destination 8">
+                    <h3>Cape Town, South Africa</h3>
+                    <p>Discover Cape Town’s stunning landscapes, beaches, and cultural diversity.</p>
+                    <a href="destination8.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Istanbul, Turkey">
+                    <img src="images/destination9.jpg" alt="Destination 9">
+                    <h3>Istanbul, Turkey</h3>
+                    <p>Explore the rich history and vibrant culture of Istanbul, bridging Europe and Asia.</p>
+                    <a href="destination9.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Barcelona, Spain">
+                    <img src="images/destination10.jpg" alt="Destination 10">
+                    <h3>Barcelona, Spain</h3>
+                    <p>Experience the art, architecture, and vibrant nightlife of Barcelona.</p>
+                    <a href="destination10.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Amsterdam, Netherlands">
+                    <img src="images/destination11.jpg" alt="Destination 11">
+                    <h3>Amsterdam, Netherlands</h3>
+                    <p>Enjoy the picturesque canals and rich history of Amsterdam.</p>
+                    <a href="destination11.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Lisbon, Portugal">
+                    <img src="images/destination12.jpg" alt="Destination 12">
+                    <h3>Lisbon, Portugal</h3>
+                    <p>Discover the charm of Lisbon with its historic neighborhoods and coastal views.</p>
+                    <a href="destination12.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Vancouver, Canada">
+                    <img src="images/destination13.jpg" alt="Destination 13">
+                    <h3>Vancouver, Canada</h3>
+                    <p>Explore Vancouver’s stunning natural scenery and cosmopolitan atmosphere.</p>
+                    <a href="destination13.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Buenos Aires, Argentina">
+                    <img src="images/destination14.jpg" alt="Destination 14">
+                    <h3>Buenos Aires, Argentina</h3>
+                    <p>Experience the vibrant culture and architecture of Buenos Aires.</p>
+                    <a href="destination14.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Seoul, South Korea">
+                    <img src="images/destination15.jpg" alt="Destination 15">
+                    <h3>Seoul, South Korea</h3>
+                    <p>Discover the dynamic cityscape and rich history of Seoul.</p>
+                    <a href="destination15.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Hong Kong">
+                    <img src="images/destination16.jpg" alt="Destination 16">
+                    <h3>Hong Kong</h3>
+                    <p>Experience the bustling energy and diverse culture of Hong Kong.</p>
+                    <a href="destination16.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Rio de Janeiro, Brazil">
+                    <img src="images/destination17.jpg" alt="Destination 17">
+                    <h3>Rio de Janeiro, Brazil</h3>
+                    <p>Enjoy the vibrant culture and stunning beaches of Rio de Janeiro.</p>
+                    <a href="destination17.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Singapore">
+                    <img src="images/destination18.jpg" alt="Destination 18">
+                    <h3>Singapore</h3>
+                    <p>Explore the modern marvels and rich cultural heritage of Singapore.</p>
+                    <a href="destination18.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Kyoto, Japan">
+                    <img src="images/destination19.jpg" alt="Destination 19">
+                    <h3>Kyoto, Japan</h3>
+                    <p>Discover the traditional beauty and historical landmarks of Kyoto.</p>
+                    <a href="destination19.html">Read More</a>
+                </div>
+                <div class="destination" data-name="Dubai, UAE">
+                    <img src="images/destination20.jpg" alt="Destination 20">
+                    <h3>Dubai, UAE</h3>
+                    <p>Experience the luxury and modern marvels of Dubai, from skyscrapers to desert adventures.</p>
+                    <a href="destination20.html">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- Logo Section -->
+            <div class="footer-logo">
+                <h1>TravelMe</h1>
+            </div>
+    
+            <!-- Links Section -->
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="destination.html">Destinations</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+    
+            <!-- Contact Information Section -->
+            <div class="footer-contact">
+                <p><strong>Email:</strong> contact@travelme.com</p>
+                <p><strong>Phone:</strong> +1 (234) 567-890</p>
+                <p><strong>Address:</strong> 123 Travel Street, Wanderlust City, TX</p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-social">
+                <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+            </div>
+        </div>
+    </footer>
+    <script>
+        function performSearch() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let destinations = document.querySelectorAll('.destination');
+            
+            destinations.forEach(destination => {
+                let destinationName = destination.getAttribute('data-name').toLowerCase();
+                if (destinationName.includes(input)) {
+                    destination.style.display = '';
+                } else {
+                    destination.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
