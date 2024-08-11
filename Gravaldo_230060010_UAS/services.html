@@ -6,6 +6,7 @@
     <title>Services - Travel Destinations</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .services-section {
             padding: 40px;
@@ -23,9 +24,41 @@
             margin-bottom: 20px;
             color: #333;
         }
+        .accordion {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .accordion-item {
+            border-bottom: 1px solid #ddd;
+        }
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+        .accordion-summary {
+            background-color: #f4f4f4;
+            padding: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .accordion-summary:hover {
+            background-color: #e2e2e2;
+        }
+        .accordion-summary i {
+            margin-right: 10px;
+        }
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            color: #666;
+        }
         .services-content table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
         }
         .services-content th, .services-content td {
             border: 1px solid #ddd;
@@ -67,72 +100,169 @@
     <section class="services-section">
         <div class="services-content">
             <h2>Our Services</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Service</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Travel Planning</td>
-                        <td>Customized travel itineraries tailored to your preferences.</td>
-                        <td>$250</td>
-                    </tr>
-                    <tr>
-                        <td>Accommodation Booking</td>
-                        <td>Assistance with booking hotels, resorts, and vacation rentals.</td>
-                        <td>$150</td>
-                    </tr>
-                    <tr>
-                        <td>Guided Tours</td>
-                        <td>Personalized guided tours to explore destinations in-depth.</td>
-                        <td>$400</td>
-                    </tr>
-                    <tr>
-                        <td>Travel Insurance</td>
-                        <td>Comprehensive travel insurance coverage for peace of mind.</td>
-                        <td>$100</td>
-                    </tr>
-                    <tr>
-                        <td>Visa Assistance</td>
-                        <td>Help with visa applications and documentation.</td>
-                        <td>$200</td>
-                    </tr>
-                    <tr>
-                        <td>Event Planning</td>
-                        <td>Organizing and managing travel arrangements for special events.</td>
-                        <td>$350</td>
-                    </tr>
-                    <tr>
-                        <td>Local Experiences</td>
-                        <td>Curated local experiences to enrich your travel adventure.</td>
-                        <td>$180</td>
-                    </tr>
-                    <tr>
-                        <td>Luxury Travel</td>
-                        <td>Exclusive luxury travel packages with premium services.</td>
-                        <td>$500</td>
-                    </tr>
-                    <tr>
-                        <td>Corporate Travel</td>
-                        <td>Specialized travel services for business and corporate clients.</td>
-                        <td>$300</td>
-                    </tr>
-                    <tr>
-                        <td>Transportation Services</td>
-                        <td>Booking and arranging transportation including cars and transfers.</td>
-                        <td>$120</td>
-                    </tr>
-                    <tr>
-                        <td>Customized Itineraries</td>
-                        <td>Creating bespoke itineraries based on personal interests and preferences.</td>
-                        <td>$270</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-summary">
+                        <i class="fas fa-plane"></i> Travel Planning & Booking
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Travel Planning</td>
+                                    <td>Customized travel itineraries tailored to your preferences.</td>
+                                    <td>$250</td>
+                                </tr>
+                                <tr>
+                                    <td>Accommodation Booking</td>
+                                    <td>Assistance with booking hotels, resorts, and vacation rentals.</td>
+                                    <td>$150</td>
+                                </tr>
+                                <tr>
+                                    <td>Transportation Services</td>
+                                    <td>Booking and arranging transportation including cars and transfers.</td>
+                                    <td>$120</td>
+                                </tr>
+                                <tr>
+                                    <td>Customized Itineraries</td>
+                                    <td>Creating bespoke itineraries based on personal interests and preferences.</td>
+                                    <td>$270</td>
+                                </tr>
+                                <tr>
+                                    <td>Cruise Bookings</td>
+                                    <td>Assistance with booking cruise vacations, including itinerary planning and cabin selection.</td>
+                                    <td>$400</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-summary">
+                        <i class="fas fa-map-marked-alt"></i> Guided Tours & Experiences
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Guided Tours</td>
+                                    <td>Personalized guided tours to explore destinations in-depth.</td>
+                                    <td>$400</td>
+                                </tr>
+                                <tr>
+                                    <td>Local Experiences</td>
+                                    <td>Curated local experiences to enrich your travel adventure.</td>
+                                    <td>$180</td>
+                                </tr>
+                                <tr>
+                                    <td>Adventure Travel</td>
+                                    <td>Specialized travel packages for adventure seekers, including activities like trekking and diving.</td>
+                                    <td>$350</td>
+                                </tr>
+                                <tr>
+                                    <td>Cultural Tours</td>
+                                    <td>Immersive cultural experiences, including museum tours and local workshops.</td>
+                                    <td>$300</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-summary">
+                        <i class="fas fa-shield-alt"></i> Insurance & Assistance
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Travel Insurance</td>
+                                    <td>Comprehensive travel insurance coverage for peace of mind.</td>
+                                    <td>$100</td>
+                                </tr>
+                                <tr>
+                                    <td>Visa Assistance</td>
+                                    <td>Help with visa applications and documentation.</td>
+                                    <td>$200</td>
+                                </tr>
+                                <tr>
+                                    <td>Event Planning</td>
+                                    <td>Organizing and managing travel arrangements for special events.</td>
+                                    <td>$350</td>
+                                </tr>
+                                <tr>
+                                    <td>Health & Wellness Retreats</td>
+                                    <td>Wellness-focused travel packages including yoga retreats and spa getaways.</td>
+                                    <td>$450</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-summary">
+                        <i class="fas fa-gift"></i> Specialized Packages
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luxury Travel</td>
+                                    <td>Exclusive luxury travel packages with premium services.</td>
+                                    <td>$500</td>
+                                </tr>
+                                <tr>
+                                    <td>Family Travel Packages</td>
+                                    <td>Tailored travel packages for families, including family-friendly accommodations and activities.</td>
+                                    <td>$280</td>
+                                </tr>
+                                <tr>
+                                    <td>Pet-Friendly Travel</td>
+                                    <td>Travel arrangements for you and your pets, including pet-friendly accommodations and services.</td>
+                                    <td>$220</td>
+                                </tr>
+                                <tr>
+                                    <td>Student Travel Deals</td>
+                                    <td>Discounted travel packages and itineraries tailored for students.</td>
+                                    <td>$190</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <footer>
@@ -144,10 +274,6 @@
     
             <!-- Links Section -->
             <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="destination.html">Destinations</a>
-                <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
             </div>
@@ -165,9 +291,19 @@
                 <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
                 <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
             </div>
         </div>
     </footer>
+    <script>
+        // JavaScript to toggle accordion content
+        document.querySelectorAll('.accordion-summary').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                const isVisible = content.style.display === 'block';
+                document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+                content.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+    </script>
 </body>
 </html>
